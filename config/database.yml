@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: poll_production
-  username: poll
+  database: <%= ENV['SERVER_DATABASE'] %>
+  username: <%= ENV['SERVER_DATABASE_USER'] %>
   password: <%= ENV['SERVER_DATABASE_PASSWORD'] %>
